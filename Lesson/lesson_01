@@ -66,3 +66,26 @@ public:
           return n;
       }
   };
+
+第三题: Leetcode 283 移动零
+  给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+  
+主题思路：
+  题目和上题类似。通过两个索引，对数组进行操作。用一个索引，存放不等于0的数值；另一个索引，用来向后遍历数组。
+  
+代码：
+  class Solution {
+  public:
+      void moveZeroes(vector<int>& nums) {
+          int n = 0;
+
+          for(int i =0;i<nums.size();i++)
+              if(nums[i]!=0) nums[n++] =nums[i];
+
+          for(;n<len;n++)  nums[n] = 0;
+      }
+  };
+  
+  
+  
+  
