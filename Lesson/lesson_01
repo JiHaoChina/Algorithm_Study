@@ -17,6 +17,7 @@
 
 class Solution {
 public:
+    //归并排序
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         int i=m-1;
         int j=n-1;
@@ -38,7 +39,7 @@ public:
         
     }
 };
-
+这道题的算法是 归并排序的基本操作。
 
 第二题： Leetcode26 去重
 
