@@ -78,11 +78,14 @@ public:
             //关键字不存在，需要插入新数值对，再考虑缓存是否达上限（插入的时候才需考虑是否达容量）
             if(map.size() == size)
             {
+	        //删除链表尾部，最久不使用的节点
                 Node* temp = delete_origin(tail->pre);
                 map.erase(temp->key);
             }
+	    //插入新节点
             Node* temp = new Node(key,value);
             insert_head(temp);
+	    //将新节点的(key,Node*）存入到哈希表中
             map[key] = temp;
         }
         
